@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Default</title>
+        <style>
+            body {
+                font-family: comic sans ms, cursive;
+                text-align: left;
+                background-color: #6082B6;
+                font-size: 20px;
+                
+            }
+            h1 {
+                text-align: center;
+                text-shadow: 2px 2px white;
+                background-color: #A7C7E7; width: 80%;
+                border-style: groove;
+                border-radius: 100px;
+                margin-left: auto;
+                margin-right: auto;
+            }  
+            .float-button-right {
+                float: right;
+            }    
+            .float-button-left {
+                float: left;
+            }    
+            button {
+                width: 150px;
+                height: 60px;
+                border-radius: 30px;
+            } 
+            button:hover {
+                background-color: #A7C7E7;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>&bull; Tasks Entered &bull;</h1>
+        <br>
+        <ul id="tasks"></ul>
+                <script>
+                    fetch('/default')
+                    .then(function(response) {return response.json();})
+                    .then(function(json) {
+                    var output = ""
+                    for(var i = 0; i < json.length; i++)
+                        {
+                            output += '<li>' + json[i].text + '</li><br>'
+                        }
+                        document.getElementById("tasks").innerHTML = output
+                    });
+                </script>
+            <form action="user.html" class="float-button-right">
+                <button type="submit">Create New User</button>
+            </form>
+            <form action="task.html" class="float-button-left">
+                <button type="submit">Enter New Task</button>
+            </form>
+    </body>
+</html>

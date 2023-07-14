@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Task</title>
+      <style>
+          body {
+              font-family: comic sans ms, cursive;
+              background-color: #6082B6;
+              font-size: larger;
+              text-align: center;
+              margin-top: 5%;
+          }
+          .form-center {
+              display: flex;
+              justify-content: center;
+              background-color: #A7C7E7; width: 80%;
+              border-style: groove;
+              border-radius: 50px;
+              margin: auto;
+          }
+          div {
+              margin-bottom: 10px;
+          }
+          label {
+              display: inline-block;
+              width: 200px;
+          }
+          textarea {
+              height: 270px;
+              width: 275px;
+              padding: 10px;
+              font-size: 16px;
+              line-height: 2;
+              border-radius: 20px;
+              resize: none;
+          }
+          button {
+              width: 100px;
+              height: 30px;
+              border-radius: 15px;
+          }
+          button:hover {
+              background-color: #6082B6;
+          }
+          h1 {
+              text-align: center;
+              text-shadow: 2px 2px white;
+              background-color: #A7C7E7; width: 80%;
+              border-style: groove;
+              border-radius: 100px;
+              margin-left: auto;
+              margin-right: auto;
+          }
+      </style>
+  </head>
+  <body>
+    <br><br>
+      <h1>&bull; Create New Task &bull;</h1>
+      <br><br>
+      <div class="form-center">
+        <form action="/task" method="post">
+            <br>
+            <textarea name="text" placeholder="Enter task here..." required></textarea>
+            <br>
+            <button type="submit">Submit</button>
+            <br><br>
+            <a href="default.html">Go to Default Page</a>   
+        </form>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create User</title>
+        <style>
+            body {
+                font-family: comic sans ms, cursive;
+                background-color: #6082B6;
+                font-size: larger;
+                text-align: center;
+                margin-top: 5%;
+            }
+            .form-center {
+                display: flex;
+                justify-content: center;
+                background-color: #A7C7E7; width: 80%;
+                border-style: groove;
+                border-radius: 50px;
+                margin: auto;
+            }
+            div {
+                margin-bottom: 10px;
+            }
+            label {
+                display: inline-block;
+                width: 150px;
+            }
+            button {
+                width: 100px;
+                height: 30px;
+                border-radius: 15px;
+            }
+            button:hover {
+                background-color: #6082B6;
+            }
+            input {
+                border-radius: 15px;
+            }
+            span {
+                color: red;
+            }
+            p {
+                font-size: small;
+            }
+            h1 {
+                text-align: center;
+                text-shadow: 2px 2px white;
+                background-color: #A7C7E7; width: 80%;
+                border-style: groove;
+                border-radius: 100px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <br><br>
+        <h1>&bull; Create New User &bull;</h1>
+        <br><br>
+        <div class="form-center">
+            <form action="/user" method="post">
+                    <br>
+                <div>
+                    <label for="fname">First Name:<span>*</span></label>
+                    <input type="text" name="fname" size="35" required>
+                </div>
+                <div>
+                    <label for="lname">Last Name:<span>*</span></label>
+                    <input type="text" name="lname" size="35" required>
+                </div>
+                <div>
+                    <label for="email">Email Address:<span>*</span></label>
+                    <input type="email" name="email" size="35" required>
+                </div>
+                <div>
+                    <label for="username">Username:<span>*</span></label>
+                    <input type="text" name="username" size="35" required>
+                </div>
+                <div>
+                    <label for="password">Password:<span>*</span></label>
+                    <input type="password" name="password" size="35" required>
+                </div>
+                <br>
+                <button type="submit">Submit</button>
+                <br>
+                <p><span>*</span>Required fields</p>
+            </form>
+        </div>
+    </body>
+</html>
